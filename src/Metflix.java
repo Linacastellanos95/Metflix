@@ -44,6 +44,11 @@ public class Metflix {
         milagro.actores.add(actor);
         this.peliculas.add(milagro);
 
+        Pelicula elResplandor = new Pelicula();
+        elResplandor.nombre ="El Resplandor";
+        elResplandor.director = new Director();
+        elResplandor.director.nombre = "Stanley Kubrick";
+
         // Series
         // 1
         Serie howImet = new Serie();
@@ -58,7 +63,7 @@ public class Metflix {
         actor.nombre = "Cobie Smulders";
         howImet.actores.add(actor);
 
-        // Temporada 1
+        // T5:E11,1
         Temporada temporada = new Temporada();
         temporada.numero = 5;
 
@@ -73,7 +78,7 @@ public class Metflix {
         episodio.numero = 1;
         temporada.episodios.add(episodio);
 
-        // Temporada 2
+        // T3:E1,4
         temporada = new Temporada();
         temporada.numero = 3;
 
@@ -87,8 +92,16 @@ public class Metflix {
         episodio.nombre = "Little boys";
         episodio.numero = 4;
         temporada.episodios.add(episodio);
+
+        Websodio ws = new Websodio();
+        ws.nombre = "Nombre websodio en internet";
+        ws.numero = 35;
+        ws.link = "http://miepisodios.com/websodio.avi";
+        temporada.episodios.add(ws);
+
       
         howImet.temporadas.add(temporada); // Agrego la temporada y el episodio, es mejor al final
+        
         this.series.add(howImet);
 
      //2
@@ -164,8 +177,6 @@ public class Metflix {
         riverdale.temporadas.add(temporada);
         this.series.add(riverdale);
 
-
-
     }
         
 
@@ -186,6 +197,9 @@ public class Metflix {
             }
             return null;
         
+    //Metflix reciba por parametro un nombre de serie, un número de temporada
+    // y un número de episodio y que lo reproduzca.
+
 
     
 
